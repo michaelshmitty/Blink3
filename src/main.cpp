@@ -1,8 +1,12 @@
 #include <Arduino.h>
+#include "DHT.h"
+
+DHT dht;
 
 void setup() {
     // initialize LED digital pin as an output.
     pinMode(LED_BUILTIN, OUTPUT);
+    dht.setup(1);
 }
 
 void loop() {
